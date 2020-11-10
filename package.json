@@ -10,7 +10,8 @@
     "test": "echo \"No test specified\" && exit 0",
     "serve": "quasar dev",
     "dev": "quasar dev",
-    "build": "quasar build"
+    "build": "quasar build",
+    "deploy": "firebase deploy"
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
