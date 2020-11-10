@@ -3,6 +3,7 @@
 node_modules
 .firebase
 .github
+old
 # Quasar core related directories
 .quasar
 /dist
