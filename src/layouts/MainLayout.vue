@@ -12,10 +12,10 @@
 				/>
 
 				<q-toolbar-title>
-					Everton Buzzi Project
+					Everton Buzzi
 				</q-toolbar-title>
 
-				<div>Quasar v{{ $q.version }}</div>
+				<div>Welcome to my personal web site</div>
 			</q-toolbar>
 		</q-header>
 
@@ -29,6 +29,11 @@
 				<q-item-label header class="text-grey-8">
 					Essential Links
 				</q-item-label>
+				<EssentialComponents
+					v-for="router in essentialRouts"
+					:key="router.title"
+					v-bind="router"
+				/>
 				<EssentialLink
 					v-for="link in essentialLinks"
 					:key="link.title"
@@ -44,60 +49,72 @@
 </template>
 
 <script>
+	import EssentialComponents from "components/EssentialComponents.vue";
 	import EssentialLink from "components/EssentialLink.vue";
 
 	const linksData = [
 		{
-			title: "Docs",
-			caption: "quasar.dev",
-			icon: "school",
-			link: "https://quasar.dev",
-		},
-		{
-			title: "Github",
-			caption: "github.com/quasarframework",
-			icon: "code",
-			link: "https://github.com/quasarframework",
-		},
-		{
-			title: "Discord Chat Channel",
-			caption: "chat.quasar.dev",
-			icon: "chat",
-			link: "https://chat.quasar.dev",
-		},
-		{
-			title: "Forum",
-			caption: "forum.quasar.dev",
-			icon: "record_voice_over",
-			link: "https://forum.quasar.dev",
-		},
-		{
 			title: "Twitter",
-			caption: "@quasarframework",
+			caption: "@EvertonBuzzi",
 			icon: "rss_feed",
-			link: "https://twitter.quasar.dev",
+			link: "https://twitter.com/evertonbuzzi",
 		},
 		{
-			title: "Facebook",
-			caption: "@QuasarFramework",
+			title: "GitHub",
+			caption: "@KicKerBNU",
 			icon: "public",
-			link: "https://facebook.quasar.dev",
+			link: "https://github.com/KicKerBNU",
 		},
 		{
-			title: "Quasar Awesome",
-			caption: "Community Quasar projects",
+			title: "Linkedin",
+			caption: "@EvertonBuzzi",
 			icon: "favorite",
-			link: "https://awesome.quasar.dev",
+			link: "https://br.linkedin.com/in/evertonbuzzi",
+		},
+	];
+	const routsData = [
+		{
+			title: "Home",
+			caption: "",
+			icon: "home",
+			link: "",
+			routs: "/",
+		},
+		{
+			title: "Curriculum",
+			caption: "",
+			icon: "school",
+			link: "",
+			routs: "curriculum",
+		},
+		{
+			title: "Stack",
+			caption: "",
+			icon: "code",
+			routs: "stack",
+		},
+		{
+			title: "About Me",
+			caption: "",
+			icon: "chat",
+			routs: "aboutMe",
+		},
+		{
+			title: "Find Me",
+			caption: "",
+			icon: "record_voice_over",
+			routs: "findMe",
 		},
 	];
 
 	export default {
 		name: "MainLayout",
-		components: { EssentialLink },
+		components: { EssentialLink, EssentialComponents },
 		data() {
 			return {
 				leftDrawerOpen: false,
 				essentialLinks: linksData,
+				essentialRouts: routsData,
 			};
 		},
 	};

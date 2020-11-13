@@ -1,5 +1,10 @@
 <template>
-	<q-item v-if="link" clickable tag="a" target="_blank" :href="link">
+	<q-item
+		clickable
+		tag="a"
+		target="_blank"
+		@click="$router.push(routs).catch((err) => {})"
+	>
 		<q-item-section v-if="icon" avatar>
 			<q-icon :name="icon" />
 		</q-item-section>
@@ -15,7 +20,7 @@
 
 <script>
 	export default {
-		name: "EssentialLink",
+		name: "EssentialRouts",
 		props: {
 			title: {
 				type: String,
@@ -27,9 +32,9 @@
 				default: "",
 			},
 
-			link: {
+			routs: {
 				type: String,
-				default: "#",
+				default: "",
 			},
 
 			icon: {
@@ -39,3 +44,5 @@
 		},
 	};
 </script>
+
+<style></style>
