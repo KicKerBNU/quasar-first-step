@@ -1,6 +1,6 @@
 <template>
 	<q-page class="flex flex-center">
-		<img alt="Everton photo" src="~assets/everton.jpeg" />
+		<img alt="Everton photo" src="~assets/everton_t.png" class="home" />
 	</q-page>
 </template>
 
@@ -9,3 +9,8 @@
 		name: "PageIndex",
 	};
 </script>
+<style scoped>
+	.home {
+		width: 35%;
+	}
+</style>
