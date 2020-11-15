@@ -1,6 +1,6 @@
 # quasar-first-step (quasar-first-step)
 
-Quasar first impressions
+Quasar first impressions, im using this project also as my personal site https://evertonbuzzi.com
 
 ## Install the dependencies
 
