@@ -1,108 +1,40 @@
 <template>
 	<div class="q-pa-lg">
 		<q-timeline :layout="layout" :side="side" color="secondary">
-			<q-timeline-entry heading>Timeline heading</q-timeline-entry>
+			<q-timeline-entry heading>{{ currentYear }}</q-timeline-entry>
 
 			<q-timeline-entry
-				title="Event Title"
-				subtitle="February 22, 1986"
-				side="left"
-			>
-				<div>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in
-					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum.
-				</div>
-			</q-timeline-entry>
-
-			<q-timeline-entry
-				title="Event Title"
-				subtitle="February 21, 1986"
+				title="Inventti Soluções"
+				:subtitle="currentJob"
 				side="right"
-				icon="delete"
+				avatar="https://firebasestorage.googleapis.com/v0/b/fin-backend.appspot.com/o/iventti.png?alt=media"
 			>
-				<div>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in
-					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum.
-				</div>
-			</q-timeline-entry>
-
-			<q-timeline-entry heading>November, 2017</q-timeline-entry>
-
-			<q-timeline-entry
-				title="Event Title"
-				subtitle="February 22, 1986"
-				side="left"
-				avatar="https://cdn.quasar.dev/img/avatar3.jpg"
-			>
-				<div>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in
-					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum.
-				</div>
+				<div>Junior Frontend Developer</div>
 			</q-timeline-entry>
 
 			<q-timeline-entry
-				title="Event Title"
-				subtitle="February 22, 1986"
+				title="Inventti Soluções"
+				subtitle="June 05, 2020"
 				side="right"
+				avatar="https://firebasestorage.googleapis.com/v0/b/fin-backend.appspot.com/o/iventti.png?alt=media"
 			>
-				<div>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in
-					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum.
-				</div>
+				<div>Junior Frontend Developer</div>
+				<div>Projects: Transport Invoices, ERP Accountant Area</div>
 			</q-timeline-entry>
 
-			<q-timeline-entry
-				title="Event Title"
-				subtitle="February 22, 1986"
-				side="left"
-				color="orange"
-				icon="done_all"
-			>
-				<div>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in
-					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum.
-				</div>
-			</q-timeline-entry>
+			<q-timeline-entry heading>2019</q-timeline-entry>
 
 			<q-timeline-entry
-				title="Event Title"
-				subtitle="February 22, 1986"
+				title="Inventti Soluções"
+				subtitle="December 05, 2019"
 				side="right"
+				avatar="https://firebasestorage.googleapis.com/v0/b/fin-backend.appspot.com/o/iventti.png?alt=media"
 			>
+				<p>ERP Software</p>
 				<div>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in
-					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum.
+					Intership: Development of front end interfaces using VueJs.
 				</div>
+				<div>Projects: Referral Marketing, POS, Onboarding</div>
 			</q-timeline-entry>
 
 			<q-timeline-entry
@@ -111,6 +43,7 @@
 				side="left"
 				avatar="https://firebasestorage.googleapis.com/v0/b/fin-backend.appspot.com/o/besistemas.jpg?alt=media"
 			>
+				<p>Mall Management Software</p>
 				<div>
 					Customer Success, Unit Testing, Software Documentation, Bug Fixes
 				</div>
@@ -125,7 +58,41 @@
 			return {
 				layout: "comfortable",
 				side: "right",
+				currentYear: null,
+				currentJob: null,
 			};
+		},
+		mounted() {
+			this.getCurrentYear();
+		},
+		methods: {
+			getCurrentYear() {
+				var now = new Date();
+				this.currentYear = now.getFullYear();
+
+				const monthNames = [
+					"January",
+					"February",
+					"March",
+					"April",
+					"May",
+					"June",
+					"July",
+					"August",
+					"September",
+					"October",
+					"November",
+					"December",
+				];
+
+				this.currentJob =
+					monthNames[now.getMonth()] +
+					" " +
+					now.getDate() +
+					", " +
+					this.currentYear +
+					" - Current job ";
+			},
 		},
 	};
 </script>
