@@ -56,19 +56,22 @@
 		{
 			title: "Twitter",
 			caption: "@EvertonBuzzi",
-			icon: "rss_feed",
+			icon:
+				"img:https://firebasestorage.googleapis.com/v0/b/fin-backend.appspot.com/o/twitter.png?alt=media",
 			link: "https://twitter.com/evertonbuzzi",
 		},
 		{
 			title: "GitHub",
 			caption: "@KicKerBNU",
-			icon: "public",
+			icon:
+				"img:https://firebasestorage.googleapis.com/v0/b/fin-backend.appspot.com/o/github.png?alt=media",
 			link: "https://github.com/KicKerBNU",
 		},
 		{
 			title: "Linkedin",
 			caption: "@EvertonBuzzi",
-			icon: "favorite",
+			icon:
+				"img:https://firebasestorage.googleapis.com/v0/b/fin-backend.appspot.com/o/linkedin.png?alt=media",
 			link: "https://br.linkedin.com/in/evertonbuzzi",
 		},
 	];
