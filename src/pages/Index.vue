@@ -20,32 +20,16 @@
 			>
 			</q-parallax>
 		</div>
-		<q-card
-			class="my-card text-white vertical-middle"
-			style="background: radial-gradient(circle, #35a2ff 0%, #014a88 100%)"
-		>
-			<q-card-section class="flex flex-center">
-				<div class="text-h6">
-					Keep studing, keep learning and never give up!
-				</div>
-			</q-card-section>
-			<img alt="VueJS" src="~assets/vuejs.jpg" />
-
-			<!-- <q-card-section class="q-pt-none">
-				<img alt="Everton photo" src="~assets/everton_t.png" />
-			</q-card-section> -->
-		</q-card>
-		<q-page> </q-page>
 	</div>
 </template>
 
 <script>
 	export default {
 		name: "PageIndex",
+		data() {
+			return {
+				slide: 1,
+			};
+		},
 	};
 </script>
-<style scoped>
-	.container {
-		margin: 2%;
-	}
-</style>
