@@ -82,24 +82,31 @@
 						url: "https://developers.google.com/web/tools/chrome-devtools",
 					},
 					{
-						id: 8,
+						id: 9,
 						title: "CSS3",
 						image:
 							"https://firebasestorage.googleapis.com/v0/b/fin-backend.appspot.com/o/css3.jpg?alt=media",
 						url: "https://devdocs.io/css/",
 					},
 					{
-						id: 8,
+						id: 10,
 						title: "HTML5",
 						image:
 							"https://firebasestorage.googleapis.com/v0/b/fin-backend.appspot.com/o/html5.jpg?alt=media",
 						url: "https://devdocs.io/html/",
 					},
 					{
-						id: 9,
+						id: 11,
 						title: "PUG",
 						image:
 							"https://firebasestorage.googleapis.com/v0/b/fin-backend.appspot.com/o/pug.png?alt=media",
+						url: "https://pugjs.org/api/reference.html",
+					},
+					{
+						id: 12,
+						title: "Hotjar",
+						image:
+							"https://firebasestorage.googleapis.com/v0/b/fin-backend.appspot.com/o/hotjar.png?alt=media",
 						url: "https://pugjs.org/api/reference.html",
 					},
 				],
