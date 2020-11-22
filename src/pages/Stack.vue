@@ -107,7 +107,7 @@
 						title: "Hotjar",
 						image:
 							"https://firebasestorage.googleapis.com/v0/b/fin-backend.appspot.com/o/hotjar.png?alt=media",
-						url: "https://pugjs.org/api/reference.html",
+						url: "https://hotjar.com",
 					},
 				],
 			};

@@ -9,13 +9,14 @@
 					icon="menu"
 					aria-label="Menu"
 					@click="leftDrawerOpen = !leftDrawerOpen"
+					v-show="!mobile"
 				/>
 
 				<q-toolbar-title>
 					Everton Buzzi
 				</q-toolbar-title>
 
-				<div>Welcome to my personal web site</div>
+				<div v-show="!mobile">Welcome to my personal web site</div>
 			</q-toolbar>
 		</q-header>
 
@@ -118,7 +119,11 @@
 				leftDrawerOpen: false,
 				essentialLinks: linksData,
 				essentialRouts: routsData,
+				mobile: false,
 			};
+		},
+		mounted() {
+			this.$q.platform.is.mobile ? (this.mobile = true) : (this.mobile = false);
 		},
 	};
 </script>

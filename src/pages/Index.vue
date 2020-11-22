@@ -14,12 +14,17 @@
 			</q-card-section>
 		</q-card>
 
-		<div class="row justify-between">
+		<div class="row justify-between" v-show="!mobile">
 			<q-parallax
 				src="https://firebasestorage.googleapis.com/v0/b/fin-backend.appspot.com/o/christopher-gower-m_HRfLhgABo-unsplash.jpg?alt=media"
 			>
 			</q-parallax>
 		</div>
+		<q-footer elevated bordered v-show="mobile">
+			<a href="">teste1</a>
+			<a href="">teste2</a>
+			<a href="">teste3</a>
+		</q-footer>
 	</div>
 </template>
 
@@ -29,7 +34,11 @@
 		data() {
 			return {
 				slide: 1,
+				mobile: false,
 			};
+		},
+		mounted() {
+			this.$q.platform.is.mobile ? (this.mobile = true) : (this.mobile = false);
 		},
 	};
 </script>
