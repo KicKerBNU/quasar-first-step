@@ -12,16 +12,6 @@
   <link rel="icon" href="icons/EB.jpg" type="image/x-icon">
 
 
-  <script defer src="/__/firebase/8.0.1/firebase-app.js"></script>
-  <!-- include only the Firebase features as you need -->
-  
-  
-  <!-- 
-       initialize the SDK after all desired features are loaded, set useEmulator to false
-       to avoid connecting the SDK to running emulators.
-     -->
-  <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-  <script src="/__/firebase/8.1.2/firebase-analytics.js"></script>
   
   <!-- Hotjar Tracking Code for evertonbuzzi.com -->
 <script>
@@ -34,6 +24,12 @@
       a.appendChild(r);
   })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
+<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+<script src="/__/firebase/8.1.2/firebase-app.js"></script>
+
+<!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+<script src="/__/firebase/8.1.2/firebase-analytics.js"></script>
+
 </head>
 
 <body>
