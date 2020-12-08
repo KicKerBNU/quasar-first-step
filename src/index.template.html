@@ -34,10 +34,11 @@
 
 <body>
   <div id="q-app"></div>
+  <p id="load">Firebase SDK Loading&hellip;</p>
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      const loadEl = document.querySelector('#q-app');
+      const loadEl = document.querySelector('#load');
       firebase.analytics();
       try {
         let app = firebase.app();
