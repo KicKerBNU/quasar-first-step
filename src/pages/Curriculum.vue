@@ -4,12 +4,22 @@
 			<q-timeline-entry heading>{{ currentYear }}</q-timeline-entry>
 
 			<q-timeline-entry
-				title="Inventti Soluções"
+				title="Masterlink Business Innovation"
 				:subtitle="currentJob"
+				side="right"
+				avatar="https://firebasestorage.googleapis.com/v0/b/fin-backend.appspot.com/o/Masterlink_03.PNG?alt=media"
+			>
+				<div>Frontend Developer</div>
+			</q-timeline-entry>
+
+			<q-timeline-entry
+				title="Inventti Soluções"
+				subtitle="Mai 15, 2022"
 				side="right"
 				avatar="https://firebasestorage.googleapis.com/v0/b/fin-backend.appspot.com/o/iventti.png?alt=media"
 			>
-				<div>Junior Frontend Developer</div>
+				<div>Frontend Developer</div>
+				<div>Projects: Grid System, Omni Channel</div>
 			</q-timeline-entry>
 
 			<q-timeline-entry
